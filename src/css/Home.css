@@ -1,0 +1,50 @@
+#lassonde {
+    width: 500px;
+}
+
+#intro {
+    width: 500px;
+}
+
+.list-1 {
+    width: 500px;
+    list-style-type: none;
+}
+
+#title {
+    font-size: 80px;
+}
+
+.header2 {
+    text-decoration: underline;
+}
+
+.header3 {
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.list-2 {
+    list-style-type: none;
+
+}
+
+.list-2 li {
+    display: inline-block;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.footer {
+    background: linear-gradient(45deg, #3b8381, #483d4f);
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #130d17;
+}
+
+a:hover {
+    color: #794f94;
+}
