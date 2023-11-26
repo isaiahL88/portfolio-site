@@ -9,6 +9,7 @@ import {
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import SmoothScrollbar from './components/SmoothScrollBar';
+import { Analytics } from '@vercel/analytics';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </SmoothScrollbar>
-
+        <Analytics />
       </div>
     </Router>
   );
