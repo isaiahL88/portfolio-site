@@ -9,7 +9,7 @@ import {
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import SmoothScrollbar from './components/SmoothScrollBar';
-import { Analytics } from '@vercel/analytics';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
