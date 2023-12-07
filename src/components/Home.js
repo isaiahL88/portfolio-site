@@ -4,10 +4,14 @@ import lassonde from "../assets/lassonde.jpg"
 import "../css/Home.css"
 import Projects from "./Projects"
 import Footer from "./Footer"
+import coding from "../assets/coding.svg"
+import uiDesign from "../assets/ui-design.svg"
 
 
 
 const Home = () => {
+    const [showProj, setShowProj] = useState();
+
     return (
         <>
             <div class='home-div home-page'>
@@ -53,7 +57,19 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <Projects />
+            <div id='button-container'>
+                <button className='main-button' id='web-button' onClick={setShowProj('web')}>
+                    <h1>Freelance Web Dev</h1>
+                    <img src={uiDesign} />
+                </button>
+                <button className='main-button' id='proj-button'>
+                    <h1>Personal Projects / Competitions</h1>
+                    <img src={coding} />
+                </button>
+            </div>
+            if(state.showProj.equals("web")) {
+                return <Projects />;
+            }
             <Footer />
         </>
     )

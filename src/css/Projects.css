@@ -55,3 +55,23 @@
     object-fit: contain;
     width: 500px;
 }
+
+.main-button {
+    width: 400px;
+    height: 400px;
+    margin: 100px;
+    background: none;
+    border-radius: 40px;
+}
+
+#web-button:hover {
+    background: rgba(1, 17, 194, 0.233)
+}
+
+#proj-button:hover {
+    background: rgba(1, 17, 194, 0.233)
+}
+
+#button-container {
+    background: none;
+}
