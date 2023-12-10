@@ -8368,6 +8368,11 @@
   "resolved" "https://registry.yarnpkg.com/slash/-/slash-4.0.0.tgz"
   "version" "4.0.0"
 
+"smooth-scrollbar-react@^2.4.1":
+  "integrity" "sha512-9UuVZtQO1V2oeWb1n13ZgXcZ0nM79Tqtgov/8xUeZUWicTIg8xO+tHzhfBrE/3DlvGEQ+keFDX96UGTzICoNSg=="
+  "resolved" "https://registry.npmjs.org/smooth-scrollbar-react/-/smooth-scrollbar-react-2.4.1.tgz"
+  "version" "2.4.1"
+
 "smooth-scrollbar@^8.8.4":
   "integrity" "sha512-Wn2Q/iE+PE1ef4EfhFMhgaIMfSrjJl2LalRu0hBWSrw5nZKGsUIjWFWHnLB/Lpx7N+a1pJH6+wkQzBr+5nWPUg=="
   "resolved" "https://registry.yarnpkg.com/smooth-scrollbar/-/smooth-scrollbar-8.8.4.tgz"

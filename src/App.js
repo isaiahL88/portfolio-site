@@ -8,21 +8,21 @@ import {
 } from "react-router-dom";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
-import SmoothScrollbar from './components/SmoothScrollBar';
 import { Analytics } from '@vercel/analytics/react';
+import { Scrollbar } from 'smooth-scrollbar-react';
 
 function App() {
   return (
     <Router>
       <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' />
       <div className="App">
-        <SmoothScrollbar>
+        <Scrollbar>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
-        </SmoothScrollbar>
+        </Scrollbar>
         <Analytics />
       </div>
     </Router>
