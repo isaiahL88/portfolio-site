@@ -1,17 +1,20 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import javaScript from "../assets/javaScript.png"
 import reactLogo from "../assets/react.png"
 import html from "../assets/html.png"
 import css from "../assets/css.png"
+import lin from "../assets/mobile-lin.png"
+import "../css/WebProjects.css"
+import nunuLogo from "../assets/nunusLogo.png"
 
 
-const WebProjects = () => {
+const WebProjects = forwardRef((props, ref) => {
   return (
-    <div class='projects'>
+    <div class='projects' ref={ref}>
       <div className='project'>
         <div className='descr'>
           <h1>Linares Upholstery</h1 >
-          <p className='tiny'>Linares Upholstery, Scarborough, Ontario <a href="https://github.com/chunkitchung/Smart-Cities-Hackathon"> | Site</a></p>
+          <p className='tiny'>Linares Upholstery, Scarborough, Ontario <a href="https://linaresupholstery.com"> | Site</a></p>
           <p>Designed, developed, and deployed a website for Linares Upholstery to showcase their services, portfolio of completed restorations, and quality of sourced materials. I also improved customer outreach by using good SEO practices and creating facebook adds for the company.</p>
           <div className='frameworks'>
             <img className="framework" src={reactLogo} />
@@ -21,16 +24,26 @@ const WebProjects = () => {
           </div>
         </div>
 
-        <iframe width="475" height="400"
-          src="https://www.youtube.com/embed/lcolLWlyr20"
-          title="Smart  Cities Hackathon Coden Ramsey Submission (Read Description)"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
+        <img id='lin-image' src={lin} />
+      </div>
+      <div className='project'>
+        <div className='descr'>
+          <h1>Nunus Family Cuts</h1 >
+          <p className='tiny'>Nunu's Family Cuts, North York, Ontario <a href="https://nunusfamilycuts.com
+          "> | Site</a></p>
+          <p>Improved customer base and branding by designing a local hair salon's website, banner, flyers, and business cards. I also quickly increased customer outreach by advertising the website using good SEO practices and Facebook advertisements and using Canada Post services to mail out flyers.</p>
+          <div className='frameworks'>
+            <img className="framework" src={javaScript} />
+            <img className="framework" src={html} />
+            <img className="framework" src={css} />
+          </div>
+        </div>
+
+        <img id='nunu-logo' src={nunuLogo} />
       </div>
     </div>
 
   )
-}
+});
 
 export default WebProjects
