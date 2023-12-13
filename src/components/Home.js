@@ -63,7 +63,7 @@ const Home = () => {
             </div>
             <div id='about-page' className='home-page'>
                 <h1 className='subject'>About Me</h1>
-                <div className='home-div'>
+                <div id='about-div' className='home-div'>
                     <div className="home-child">
                         <img src={lassonde} id='lassonde' />
                         <h2>Education</h2>
@@ -83,18 +83,18 @@ const Home = () => {
                             </div>
                             <div className='skill-box'>
                                 <h2 className='skill-header'>Mobile Dev</h2>
-                                <p className='skill-paragraph'>Experience utilizing my skills to create mobile applications for Android using Java.</p>
+                                <p className='skill-paragraph'>Experience utilizing my skills in Java to create mobile applications for Android.</p>
                             </div>
                         </div>
                         <h1 className='med-header'>Languages</h1>
                         <ul id='language-list' className='horizontal-list'>
                             <li>Java</li>
-                            <li>SQL</li>
+                            <li>JavaScript</li>
+                            <li>C</li>
+                            <li>Python</li>
                             <li>Html</li>
                             <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>Python</li>
-                            <li>C</li>
+                            <li>SQL</li>
                         </ul>
                         <h1 className='med-header'>Frameworks / Tech</h1>
                         <ul id='framework-list' className='horizontal-list'>
@@ -103,25 +103,8 @@ const Home = () => {
                             <li>AWS</li>
                             <li>Firebase</li>
                             <li>MySql</li>
+                            <li>Figma</li>
                         </ul>
-                        {/* <h2 className="header2" >Languages / Tech</h2>
-                        <ul className='list-1'>
-                            <li>Java</li>
-                            <li>JavaScript</li>
-                            <li>Python</li>
-                            <li>C</li>
-                            <li>SQL</li>
-                            <li>AWS</li>
-                            <li>Gcloud</li>
-                            <li>React</li>
-                            <li>Firebase</li>
-                        </ul>
-                        <h2 className="header2" >Expertise</h2>
-                        <ul classname='list-1'>
-                            <li>OOP Development</li>
-                            <li>Web Development</li>
-                            <li>Mobile Development</li>
-                        </ul> */}
                     </div>
                 </div>
             </div>

@@ -1,0 +1,18 @@
+#logo-cred {
+    font-size: 15px;
+    float: right;
+}
+
+.contact-list {
+    width: 200px;
+}
+
+#footer-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly
+}
+
+#footer-page-header {
+    width: 600px;
+}

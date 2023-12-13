@@ -35,9 +35,6 @@
     margin-right: 1vw;
 }
 
-.footer {
-    background: linear-gradient(45deg, #3b8381, #483d4f);
-}
 
 a {
     text-decoration: none;
@@ -96,8 +93,79 @@ a:hover {
 
 #language-list {
     margin-top: 0px;
+    padding-left: 0px;
+    margin-left: none !important;
 }
 
 #framework-list {
     margin-top: 0px;
+    padding-left: 0px;
+}
+
+@media only screen and (max-width:1000px) {
+    #portrait {
+        width: 9em;
+        height: 9em;
+        display: flex;
+        padding: 5px;
+    }
+
+    #intro {
+        width: 700px;
+        padding: 5px;
+    }
+
+    #title {
+        font-size: 50px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    .about {
+        font-size: 16px;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    #home-page {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100vw;
+    }
+
+    .App {
+        width: 100vw;
+    }
+
+    #box-container {
+        flex-direction: column;
+    }
+
+    .home-div {
+        display: flex;
+        justify-content: space-around;
+        height: 60vh;
+    }
+
+    .home-page {
+        height: initial;
+        height: 50vh;
+        width: 100vw;
+        align-items: center;
+    }
+
+    #about-div {
+        flex-direction: column;
+    }
+
+    #about-page {
+        height: 200vh;
+    }
+
+    #lassonde {
+        width: 13em;
+        height: 10em;
+        object-fit: cover;
+    }
 }
