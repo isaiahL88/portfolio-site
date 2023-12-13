@@ -102,6 +102,68 @@ a:hover {
     padding-left: 0px;
 }
 
+#down-button {
+    -webkit-animation: breathing 1s ease-out infinite normal;
+    animation: breathing 1s ease-out infinite normal;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: -10em;
+}
+
+#down-button img {
+    height: 5em;
+}
+
+@-webkit-keyframes breathing {
+    0% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    25% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    60% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    100% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+@keyframes breathing {
+    0% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    25% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+
+    60% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    100% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+
 @media only screen and (max-width:1000px) {
     #portrait {
         width: 9em;
@@ -111,8 +173,11 @@ a:hover {
     }
 
     #intro {
-        width: 700px;
+        width: 100vw;
         padding: 5px;
+        flex-direction: column;
+        display: flex;
+        order: 2;
     }
 
     #title {
@@ -129,9 +194,14 @@ a:hover {
 
     #home-page {
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: space-evenly;
         width: 100vw;
+        height: 70vh;
+    }
+
+    #portrait-box {
+        order: 1;
     }
 
     .App {
@@ -211,4 +281,7 @@ a:hover {
         flex-wrap: wrap;
     }
 
+    #down-button {
+        margin-top: 5em;
+    }
 }

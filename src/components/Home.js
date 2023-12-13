@@ -7,6 +7,7 @@ import WebProjects from './WebProjects';
 import Footer from "./Footer"
 import coding from "../assets/coding.svg"
 import uiDesign from "../assets/ui-design.svg"
+import downArrow from "../assets/arrow_down.png"
 
 
 
@@ -14,6 +15,7 @@ const Home = () => {
     const [showProj, setShowProj] = useState("none");
     const projRef = useRef(null);
     const webRef = useRef(null);
+    const aboutRef = useRef(null);
 
     //Handles the state variable representing wether web or project section is showing
     //Also handles the automatic crolling
@@ -47,21 +49,28 @@ const Home = () => {
         });
     }
 
+    const handleAbout = () => {
+        aboutRef.current.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
 
     return (
         <>
             <div id='home-page' className='home-div home-page'>
                 <div className='home-child' id="intro">
                     <h1 id="title">Isaiah Linares</h1>
-                    <p className="about">
+                    <p id="intro-about" className="about">
                         A self-starter, who's passionate about creating applications that people enjoy using.
                     </p>
                 </div>
-                <div className='home-child'>
+                <div id='portrait-box' className='home-child'>
                     <img src={portrait} id='portrait' />
                 </div>
             </div>
-            <div id='about-page' className='home-page'>
+            <button id='down-button' onClick={handleAbout}><img src={downArrow}></img></button>
+            <div id='about-page' ref={aboutRef} className='home-page'>
                 <h1 className='subject'>About Me</h1>
                 <div id='about-div' className='home-div'>
                     <div className="home-child">
