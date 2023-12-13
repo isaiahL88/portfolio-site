@@ -55,3 +55,105 @@
     object-fit: contain;
     width: 500px;
 }
+
+.main-button {
+    width: 400px;
+    height: 400px;
+    margin: 100px;
+    background: none;
+    border-radius: 40px;
+}
+
+#web-button:hover {
+    background: rgba(1, 17, 194, 0.233)
+}
+
+#proj-button:hover {
+    background: rgba(1, 17, 194, 0.233)
+}
+
+#button-container {
+    background: none;
+}
+
+@media only screen and (max-width:1000px) {
+    .main-button {
+        width: 15em;
+        height: 15em;
+        margin: 0px;
+        margin-bottom: 50px;
+    }
+
+    #button-container {}
+
+    .main-button img {
+        height: 9em;
+
+    }
+
+    #ui-img {
+        height: 9em !important;
+    }
+
+    .main-button h1 {
+        font-size: 18px;
+    }
+
+    .project {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .descr {
+        width: 350px;
+    }
+
+    .frameworks {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .framework {
+        height: 2.5em;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: flex;
+    }
+
+    #nunu-logo {
+        margin-top: 0px !important;
+        padding-top: 0px;
+        width: 300px !important;
+        object-fit: scale-down !important;
+    }
+
+    #smart-check-frame {
+        height: 15em;
+        width: 15em;
+    }
+
+    #lift {
+        width: 15em;
+        height: 15em;
+    }
+
+    #music {
+        width: 17em;
+    }
+
+    #covid {
+        width: 15em;
+    }
+
+    #leaflet {
+        width: 6.8em;
+        object-fit: scale-down;
+    }
+
+    #well-done {
+        width: 15em;
+    }
+}
