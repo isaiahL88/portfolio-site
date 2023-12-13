@@ -40,6 +40,7 @@ const Projects = forwardRef((props, ref) => {
                 </div>
 
                 <iframe width="475" height="400"
+                    id="smart-check-frame"
                     src="https://www.youtube.com/embed/lcolLWlyr20"
                     title="Smart  Cities Hackathon Coden Ramsey Submission (Read Description)"
                     frameborder="0"
@@ -114,7 +115,7 @@ const Projects = forwardRef((props, ref) => {
                         <img className="framework" src={javaScript} />
                         <img className="framework" src={jquery} />
                         <img className="framework" src={chart} />
-                        <img className="framework" src={leaflet} />
+                        <img id="leaflet" className="framework" src={leaflet} />
                     </div>
                 </div>
                 <img id='covid' src={covid} />
@@ -130,7 +131,7 @@ const Projects = forwardRef((props, ref) => {
                         <img className="framework" src={lite} />
                     </div>
                 </div>
-                <img src={wellDone} />
+                <img id="well-done" src={wellDone} />
             </div>
         </div>
     )

@@ -115,7 +115,7 @@ const Home = () => {
                 </button>
                 <button className='main-button' id='web-button' onClick={handleShowWeb}>
                     <h1>Freelance Web Dev</h1>
-                    <img src={uiDesign} />
+                    <img id='ui-img' src={uiDesign} />
                 </button>
             </div >
             {showProj === "proj" ? <Projects ref={projRef} /> : <></>}
