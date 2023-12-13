@@ -7813,11 +7813,6 @@
   optionalDependencies:
     "fsevents" "^2.3.2"
 
-"react-smooth-scrollbar@^8.0.6":
-  "integrity" "sha512-yWiIC4L8DwfIRkLL+PdXq5rysEm6trxHzRk1Rx82bzuu2aWDcHhT+l1vXH/73Re/zHmGjBgrxts/wIrwC6yYJA=="
-  "resolved" "https://registry.npmjs.org/react-smooth-scrollbar/-/react-smooth-scrollbar-8.0.6.tgz"
-  "version" "8.0.6"
-
 "react@^18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz"

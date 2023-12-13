@@ -13,19 +13,27 @@ import { Scrollbar } from 'smooth-scrollbar-react';
 
 function App() {
   return (
-    <Router>
-      <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' />
-      <div className="App">
-        <Scrollbar>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Contact" element={<Contact />} />
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
-        </Scrollbar>
-        <Analytics />
-      </div>
-    </Router>
+    <>
+      <Scrollbar
+        damping="0.4"
+        plugins={{
+          overscroll: {
+            effect: 'bounce',
+          }
+        }} >
+        <Router>
+          <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' />
+          <div className="App">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/Contact" element={<Contact />} />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+            <Analytics />
+          </div>
+        </Router>
+      </Scrollbar>
+    </>
   );
 }
 
