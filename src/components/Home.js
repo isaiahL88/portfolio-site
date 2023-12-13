@@ -8,11 +8,14 @@ import Footer from "./Footer"
 import coding from "../assets/coding.svg"
 import uiDesign from "../assets/ui-design.svg"
 import downArrow from "../assets/arrow_down.png"
+import light from "../assets/light.png"
+import dark from "../assets/dark.png"
 
 
 
 const Home = () => {
     const [showProj, setShowProj] = useState("none");
+    const [darkLight, setDarkLight] = useState("light");
     const projRef = useRef(null);
     const webRef = useRef(null);
     const aboutRef = useRef(null);
@@ -55,9 +58,19 @@ const Home = () => {
         });
     }
 
+    const handleDLClick = () => {
+        if (darkLight === "light") {
+            setDarkLight("dark");
+        } else {
+            setDarkLight("light");
+        }
+    }
+
+
 
     return (
-        <>
+        <div id='home-root' className={darkLight === "light" ? "lightHome" : "darkHome"}>
+            <button id='dl-button' onClick={handleDLClick}><img id='dl-img' src={darkLight === "light" ? light : dark} /></button>
             <div id='home-page' className='home-div home-page'>
                 <div className='home-child' id="intro">
                     <h1 id="title">Isaiah Linares</h1>
@@ -69,7 +82,7 @@ const Home = () => {
                     <img src={portrait} id='portrait' />
                 </div>
             </div>
-            <button id='down-button' onClick={handleAbout}><img src={downArrow}></img></button>
+            <button id={darkLight === "light" ? "down-button" : "down-button-dark"} onClick={handleAbout}><img src={downArrow}></img></button>
             <div id='about-page' ref={aboutRef} className='home-page'>
                 <h1 className='subject'>About Me</h1>
                 <div id='about-div' className='home-div'>
@@ -130,7 +143,7 @@ const Home = () => {
             {showProj === "proj" ? <Projects ref={projRef} /> : <></>}
             {showProj === "web" ? <WebProjects ref={webRef} /> : <></>}
             <Footer />
-        </>
+        </div>
     )
 }
 
