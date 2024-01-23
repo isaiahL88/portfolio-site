@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
+import Data from "./components/Data"
 import { Analytics } from '@vercel/analytics/react';
 import { Scrollbar } from 'smooth-scrollbar-react';
 
@@ -28,6 +29,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/Contact" element={<Contact />} />
               <Route path="*" element={<Navigate to="/" />} />
+              <Route path="/Data" element={<Data />} />
             </Routes>
             <Analytics />
           </div>
