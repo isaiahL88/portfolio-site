@@ -130,6 +130,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <h3 id='arrowHeader'>Click below to browse some of my work</h3>
+            <button id={darkLight === "light" ? "down-button-normal" : "down-button-dark-normal"} ><img src={downArrow}></img></button>
             <div id='button-container'>
                 <button className='main-button' id='proj-button' onClick={handleShowProj}>
                     <h1>Personal Projects / Competitions</h1>
@@ -143,7 +145,7 @@ const Home = () => {
             {showProj === "proj" ? <Projects ref={projRef} /> : <></>}
             {showProj === "web" ? <WebProjects ref={webRef} /> : <></>}
             <Footer />
-        </div>
+        </div >
     )
 }
 

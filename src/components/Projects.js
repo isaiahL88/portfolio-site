@@ -1,6 +1,9 @@
 import React, { forwardRef } from 'react'
 import { useEffect, useRef } from 'react'
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import '@splidejs/react-splide/css'
 import "../css/Projects.css"
+import googlePlay from "../assets/google_play.png"
 import android from "../assets/android.png"
 import java from "../assets/java.png"
 import tensor from "../assets/tensor_flow.png"
@@ -19,10 +22,55 @@ import wellDone from "../assets/well-done.jpg"
 import lite from "../assets/lite.png"
 import firebase from "../assets/firebase.png"
 import lift from "../assets/lift.jpg"
+import lift2 from "../assets/lift1.jpg"
+
+
+// for splide slides
+
+const mql = window.matchMedia('(max-width: 600px)');
+let mobileView = mql.matches;
+
+const options = {
+    type: 'loop',
+    width: '20em',
+    height: '30em',
+    gap: '1rem'
+};
+
+const optionsMobile = {
+    type: 'loop',
+    width: '15em',
+    height: '25em',
+    gap: '1rem'
+};
 
 const Projects = forwardRef((props, ref) => {
     return (
         <div id='main-page-projects' className='projects' ref={ref}>
+            <div className='project'>
+                <div className='descr'>
+                    <h1>Lift App</h1>
+                    <p className='tiny'>Mobile Application, Personal Project</p>
+                    <p>Allows powerlifters, bodybuilders, and fitness enthusiasts to create and perfect their workout routines through an intuitive and fast user interface. Users can share their accumulated knowledge, learn from others by exchanging routines with friends, and discover new workouts through the app. Lift also allows users to log their sessions during every workout to see exactly how they performed each day. Another notable feature is the ability to track personal records for each Olympic lift, offering insights into one's progress over time. Users have the option to display this information on their personal profiles as well. I developed this app myself using Java / Material3 and utilized FirebaseAuth and FirebaseFirestore for the backend. Currently in Closed Testing for the Google Play Store, please contact me via email if you would like to beta test this app.</p>
+                    <div className='frameworks'>
+                        <img className="framework" src={java} />
+                        <img className="framework" src={android} />
+                        <img className="framework" src={firebase} />
+                        <img className="framework" id="googleLogo" src={googlePlay} />
+                    </div>
+                </div>
+                <Splide id='splide-lift' className='splide'
+                    options={mobileView ? optionsMobile : options}
+                    aria-label='lift'>
+                    <SplideSlide>
+                        <img className='lift-img' src={lift} />
+
+                    </SplideSlide>
+                    <SplideSlide>
+                        <img className='lift-img' src={lift2} />
+                    </SplideSlide>
+                </Splide>
+            </div>
             <div className='project'>
                 <div className='descr'>
                     <h1>Smart Checkout</h1 >
@@ -70,22 +118,7 @@ const Projects = forwardRef((props, ref) => {
                 </div>
                 <img id="store" src={store} />
             </div>
-            <div className='project'>
-                <div className='descr'>
-                    <h1>Lift</h1>
-                    <p className='tiny'>Mobile Application, Personal Project</p>
-                    <p>Allows gym and fitness enthusiasts to create, edit, and share
-                        their personal workout plans and achievements. Almost a social media
-                        for gym goers, a place for people to share knowledge built up
-                        over time, to learn from others, and spread motivation.</p>
-                    <div className='frameworks'>
-                        <img className="framework" src={java} />
-                        <img className="framework" src={android} />
-                        <img className="framework" src={firebase} />
-                    </div>
-                </div>
-                <img id="lift" src={lift} />
-            </div>
+
             <div className='project'>
                 <div className='descr'>
                     <h1>Music Tab Parser</h1>

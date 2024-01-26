@@ -115,6 +115,17 @@ a:hover {
     height: 5em;
 }
 
+
+#down-button-normal img {
+    height: 5em;
+}
+
+#down-button-dark-normal img {
+    height: 5em;
+    filter: invert(99%) sepia(4%) saturate(87%) hue-rotate(178deg) brightness(116%) contrast(100%);
+
+}
+
 #down-button-dark {
     -webkit-animation: breathing 1s ease-out infinite normal;
     animation: breathing 1s ease-out infinite normal;
@@ -123,6 +134,20 @@ a:hover {
     cursor: pointer;
     margin-top: -10em;
 }
+
+#down-button-normal {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#down-button-dark-normal {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: -10em;
+}
+
 
 #down-button-dark img {
     height: 5em;
@@ -142,6 +167,10 @@ a:hover {
 
 .darkHome * {
     color: white;
+}
+
+#arrowHeader {
+    margin-bottom: 2em;
 }
 
 
@@ -191,6 +220,12 @@ a:hover {
         -ms-transform: scale(0.9);
         transform: scale(0.9);
     }
+}
+
+
+#button-container {
+    -webkit-animation: breathing 3s ease-out infinite normal;
+    animation: breathing 3s ease-out infinite normal;
 }
 
 #dl-button {
@@ -289,6 +324,7 @@ a:hover {
 
     #button-container {
         margin-top: 30em;
+
     }
 
     .horizontal-list li {
@@ -335,6 +371,14 @@ a:hover {
     #down-button-dark {
         -webkit-animation: breathing 1s ease-out infinite normal;
         animation: breathing 1s ease-out infinite normal;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+        margin-top: 5em;
+    }
+
+    #down-button-dark-normal {
         background: none;
         border: none;
         cursor: pointer;
