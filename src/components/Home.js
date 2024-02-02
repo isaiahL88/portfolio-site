@@ -68,17 +68,9 @@ const Home = () => {
         }
     }
 
-    const saveFile = () => {
-        saveAs(
-            process.env.REACT_APP_CLIENT_URL + "/assets/Isaiah_Linares_Resume.pdf",
-            "Isaiah_Linares_Resume.pdf"
-        );
-    }
-
 
     return (
         <div id='home-root' className={darkLight === "light" ? "lightHome" : "darkHome"}>
-            <button id='resume-button' onClick={saveFile}><img id='resume-img' src={resume} /></button>
             <button id='dl-button' onClick={handleDLClick}><img id='dl-img' src={darkLight === "light" ? light : dark} /></button>
             <div id='home-page' className='home-div home-page'>
                 <div className='home-child' id="intro">
