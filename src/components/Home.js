@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react'
 import portrait from "../assets/portrait.jpg";
-import lassonde from "../assets/lassonde.jpg"
-import "../css/Home.css"
+import lassonde from "../assets/lassonde.jpg";
+import resume from "../assets/resume.png";
+import "../css/Home.css";
 import Projects from "./Projects"
 import WebProjects from './WebProjects';
 import Footer from "./Footer"
@@ -10,6 +11,7 @@ import uiDesign from "../assets/ui-design.svg"
 import downArrow from "../assets/arrow_down.png"
 import light from "../assets/light.png"
 import dark from "../assets/dark.png"
+import { saveAs } from 'file-saver';
 
 
 
@@ -66,10 +68,17 @@ const Home = () => {
         }
     }
 
+    const saveFile = () => {
+        saveAs(
+            process.env.REACT_APP_CLIENT_URL + "/assets/Isaiah_Linares_Resume.pdf",
+            "Isaiah_Linares_Resume.pdf"
+        );
+    }
 
 
     return (
         <div id='home-root' className={darkLight === "light" ? "lightHome" : "darkHome"}>
+            <button id='resume-button' onClick={saveFile}><img id='resume-img' src={resume} /></button>
             <button id='dl-button' onClick={handleDLClick}><img id='dl-img' src={darkLight === "light" ? light : dark} /></button>
             <div id='home-page' className='home-div home-page'>
                 <div className='home-child' id="intro">

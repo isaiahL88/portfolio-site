@@ -239,6 +239,22 @@ a:hover {
     animation: breathing 1.5s ease-out infinite normal;
 }
 
+#resume-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    -webkit-animation: breathing 1.5s ease-out infinite normal;
+    animation: breathing 1.5s ease-out infinite normal;
+}
+
+#resume-img {
+    width: 80px;
+    height: 80px;
+}
+
 #dl-img {
     background: none;
     height: 3em;
