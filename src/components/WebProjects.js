@@ -4,6 +4,8 @@ import reactLogo from "../assets/react.png"
 import html from "../assets/html.png"
 import css from "../assets/css.png"
 import lin from "../assets/mobile-lin.png"
+import wp from "../assets/wordpress.png"
+import wc from "../assets/wc.png"
 import "../css/WebProjects.css"
 import nunuLogo from "../assets/nunusLogo.png"
 
@@ -11,6 +13,22 @@ import nunuLogo from "../assets/nunusLogo.png"
 const WebProjects = forwardRef((props, ref) => {
   return (
     <div class='projects' ref={ref}>
+      {/* <div className='project'>
+        <div className='descr'>
+          <h1>Shop Made Rich</h1 >
+          <p className='tiny'>Made Rich T-Shirt Printing, Toronto, ON <a href="https://linaresupholstery.com"> | Site</a></p>
+          <p>Developed an eccomere website and product designer for Made Rich T-Shirt Priting, giving this business a tool to generate additional income from their customers. This t-shirt designer allows users to upload designs, upload text, and select premade designs to create unique products uncluding hats, t-shirts, hoodies, tanktops, and more. I utilized the Wordpress Platform to create this site which allows my client to manage their eccomerce store and receive custom designs thoguh the Woo-Comerce Plugin CMS.</p>
+          <div className='frameworks'>
+            <img className="framework" src={html} />
+            <img className="framework" src={css} />
+            <img className="framework" src={wp} />
+            <img className="framework" src={wc} />
+
+          </div>
+        </div>
+
+        <img id='lin-image' src={lin} />
+      </div> */}
       <div className='project'>
         <div className='descr'>
           <h1>Linares Upholstery</h1 >

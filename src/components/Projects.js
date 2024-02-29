@@ -50,13 +50,15 @@ const Projects = forwardRef((props, ref) => {
             <div className='project'>
                 <div className='descr'>
                     <h1>Lift App</h1>
-                    <p className='tiny'>Mobile Application, Personal Project</p>
-                    <p>Allows powerlifters, bodybuilders, and fitness enthusiasts to create and perfect their workout routines through an intuitive and fast user interface. Users can share their accumulated knowledge, learn from others by exchanging routines with friends, and discover new workouts through the app. Lift also allows users to log their sessions during every workout to see exactly how they performed each day. Another notable feature is the ability to track personal records for each Olympic lift, offering insights into one's progress over time. Users have the option to display this information on their personal profiles as well. I developed this app myself using Java / Material3 and utilized FirebaseAuth and FirebaseFirestore for the backend. Currently in Closed Testing for the Google Play Store, please contact me via email if you would like to beta test this app.</p>
+                    <p className='tiny'>Android App, Personal Project<a href="https://play.google.com/store/apps/details?id=com.isaiah88&hl=en&gl=US"> | Google Play</a></p>
+                    <p>Allows powerlifters, bodybuilders, and fitness enthusiasts to create and perfect their workout routines through an intuitive and fast user interface. Users can share their accumulated knowledge, learn from others by exchanging routines with friends, and discover new workouts through the app. Lift also allows users to log their sessions during every workout to see exactly how they performed each day. Another notable feature is the ability to track personal records for each Olympic lift, offering insights into one's progress over time. Users have the option to display this information on their personal profiles as well. I developed this app myself using Java / Material3 and utilized FirebaseAuth and FirebaseFirestore for the backend. I recently released the first production version on the Google Play Store, please download my app and try it out using the link above!</p>
                     <div className='frameworks'>
                         <img className="framework" src={java} />
                         <img className="framework" src={android} />
                         <img className="framework" src={firebase} />
-                        <img className="framework" id="googleLogo" src={googlePlay} />
+                        <a href="https://play.google.com/store/apps/details?id=com.isaiah88&hl=en&gl=US" >
+                            <img className="framework" id="googleLogo" src={googlePlay} />
+                        </a>
                     </div>
                 </div>
                 <Splide id='splide-lift' className='splide'
@@ -77,8 +79,8 @@ const Projects = forwardRef((props, ref) => {
             </div>
             <div className='project'>
                 <div className='descr'>
-                    <h1>Smart Checkout</h1 >
-                    <p className='tiny'>Thinking North, Smart Cities Hackathon 2023<a href="https://github.com/chunkitchung/Smart-Cities-Hackathon"> | Github</a></p>
+                    <h1>Smart Checkout App</h1 >
+                    <p className='tiny'>Android App, Thinking North, Smart Cities Hackathon 2023<a href="https://github.com/chunkitchung/Smart-Cities-Hackathon"> | Github</a></p>
                     <p>Streamlined grocery customer experience through no-cashier interaction shopping using computer vision.
                         We advanced into the finals and placed first runner-up in the Smart Business category.
                         I utilized the TensorFlowLite Computer Vision framework for our item classification and built
