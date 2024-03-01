@@ -18,7 +18,7 @@ const WebProjects = forwardRef((props, ref) => {
         <div className='descr'>
           <h1>Shop Made Rich</h1 >
           <p className='tiny'>Made Rich T-Shirt Printing, Toronto, ON <a href="https://shopmaderich.com/"> | Site</a></p>
-          <p>Developed an eccomere website and product designer for Made Rich T-Shirt Priting, giving this business a tool to generate additional income from their customers. This t-shirt designer allows users to upload designs, upload text, and select premade designs to create unique products uncluding hats, t-shirts, hoodies, tanktops, and more. I utilized the Wordpress Platform to create this site which allows my client to manage their eccomerce store and receive custom designs thoguh the Woo-Comerce Plugin CMS.</p>
+          <p>Developed an eccomere website and product designer for Made Rich T-Shirt Printing, giving this business a tool to generate additional income from their customers. This t-shirt designer allows users to upload designs, upload text, and select premade designs to create unique products uncluding hats, t-shirts, hoodies, tanktops, and more. I utilized the Wordpress Platform to create this site which allows my client to manage their eccomerce store and receive custom designs thoguh the Woo-Comerce Plugin CMS.</p>
           <div className='frameworks'>
             <img className="framework" src={html} />
             <img className="framework" src={css} />
