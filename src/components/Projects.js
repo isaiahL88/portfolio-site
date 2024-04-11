@@ -65,7 +65,7 @@ const Projects = forwardRef((props, ref) => {
                     options={mobileView ? optionsMobile : options}
                     aria-label='lift'>
                     <SplideSlide>
-                        <iframe width="400" height="600" src="https://www.youtube.com/watch?v=IYTIsCKQwFU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/IYTIsCKQwFU?si=_Km10BT7ysp9bUXf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </SplideSlide>
                     <SplideSlide>
                         <img className='lift-img' src={lift} />
