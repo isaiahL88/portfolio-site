@@ -139,7 +139,7 @@ const Home = () => {
                     <img src={coding} />
                 </button>
                 <button className='main-button' id='web-button' onClick={handleShowWeb}>
-                    <h1>Freelance Web Dev</h1>
+                    <h1>Web Development</h1>
                     <img id='ui-img' src={uiDesign} />
                 </button>
             </div >
