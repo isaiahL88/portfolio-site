@@ -32,17 +32,23 @@ let mobileView = mql.matches;
 
 const options = {
     type: 'loop',
-    width: '20em',
+    width: '18em',
     height: '30em',
     gap: '1rem'
+};
+
+const optionsLift = {
+    type: 'loop',
+    width: '32em',
 };
 
 const optionsMobile = {
     type: 'loop',
     width: '15em',
-    height: '25em',
+    height: '15em',
     gap: '1rem'
 };
+
 
 const Projects = forwardRef((props, ref) => {
     return (
@@ -62,12 +68,13 @@ const Projects = forwardRef((props, ref) => {
                     </div>
                 </div>
                 <Splide id='splide-lift' className='splide'
-                    options={mobileView ? optionsMobile : options}
+
+                    options={mobileView ? optionsMobile : optionsLift}
                     aria-label='lift'>
-                    <SplideSlide>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/IYTIsCKQwFU?si=_Km10BT7ysp9bUXf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <SplideSlide >
+                        <iframe allowfullscreen frameborder="0" width={mobileView ? "300" : "700"} height={mobileView ? "300" : "700"} src="https://www.youtube.com/embed/IYTIsCKQwFU?si=_Km10BT7ysp9bUXf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </SplideSlide>
-                    <SplideSlide>
+                    <SplideSlide >
                         <img className='lift-img' src={lift} />
 
                     </SplideSlide>
@@ -172,7 +179,7 @@ const Projects = forwardRef((props, ref) => {
                 </div>
                 <img id="well-done" src={wellDone} />
             </div>
-        </div>
+        </div >
     )
 });
 

@@ -239,6 +239,13 @@ a:hover {
     animation: breathing 1.5s ease-out infinite normal;
 }
 
+#darkLightLogo {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 200px;
+}
+
 #resume-button {
     position: absolute;
     top: 10px;

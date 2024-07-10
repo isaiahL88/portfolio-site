@@ -37,6 +37,7 @@
 
 }
 
+
 #music {
     width: 800px;
     object-fit: scale-down;
@@ -64,8 +65,8 @@
 
 .lift-img {
     object-fit: contain;
-    width: 20em;
-    height: 30em;
+    width: 400px;
+    height: 700px;
 }
 
 .main-button {
