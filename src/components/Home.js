@@ -12,8 +12,8 @@ import downArrow from "../assets/arrow_down.png"
 import light from "../assets/light.png"
 import dark from "../assets/dark.png"
 import { saveAs } from 'file-saver';
-
-
+import Lottie, { LottieRefCurrentProps } from "lottie-react"
+import animationData from '../assets/darklight.json'
 
 const Home = () => {
     const [showProj, setShowProj] = useState("none");
@@ -21,6 +21,7 @@ const Home = () => {
     const projRef = useRef(null);
     const webRef = useRef(null);
     const aboutRef = useRef(null);
+    const darklightAni = useRef < LottieRefCurrentProps > (null);
 
     //Handles the state variable representing wether web or project section is showing
     //Also handles the automatic crolling
@@ -84,6 +85,7 @@ const Home = () => {
                 </div>
             </div>
             <button id={darkLight === "light" ? "down-button" : "down-button-dark"} onClick={handleAbout}><img src={downArrow}></img></button>
+            {/* <Lottie id="darkLightLogo" lottieRef={darklightAni} animationData={animationData} value={dark} /> */}
             <div id='about-page' ref={aboutRef} className='home-page'>
                 <h1 className='subject'>About Me</h1>
                 <div id='about-div' className='home-div'>
