@@ -73,15 +73,20 @@ const Home = () => {
         <div id='home-root' className={darkLight === "light" ? "lightHome" : "darkHome"}>
             <button id='dl-button' onClick={handleDLClick}><img id='dl-img' src={darkLight === "light" ? light : dark} /></button>
             <div id='home-page' className='home-div home-page'>
-                <div className='home-child' id="intro">
-                    <h1 id="title">Isaiah Linares</h1>
-                    <p id="intro-about" className="about">
-                        A self-starter, who's passionate about creating applications that people enjoy using.
-                    </p>
+                <div className='flex-row flex items-center h-full w-full justify-evenly'>
+                    <div className='flex-col flex items-center'>
+                        <img src={portrait} className='rounded-full object-cover w-80 h-80' />
+                        <h1 id="title">Isaiah Linares</h1>
+                        <p id="intro-about" className="about">
+                            A self-starter, who's passionate about creating<br></br> applications that people enjoy using.
+                        </p>
+                    </div>
+                    <div className='w-0 h-1/2 border-solid border-2 border-black'></div>
+                    <div>
+                        <p className='text-5xl'>My Stack</p>
+                    </div>
                 </div>
-                <div id='portrait-box' className='home-child'>
-                    <img src={portrait} id='portrait' />
-                </div>
+
             </div>
             <button id={darkLight === "light" ? "down-button" : "down-button-dark"} onClick={handleAbout}><img src={downArrow}></img></button>
             <div id='about-page' ref={aboutRef} className='home-page'>
@@ -146,6 +151,7 @@ const Home = () => {
             {showProj === "proj" ? <Projects ref={projRef} /> : <></>}
             {showProj === "web" ? <WebProjects ref={webRef} /> : <></>}
             <Footer />
+
         </div >
     )
 }
