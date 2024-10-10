@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'NF': ['NeutralFace'],
+      'NFB': ['NeutralFaceBold']
+    }
   },
   plugins: [],
 }

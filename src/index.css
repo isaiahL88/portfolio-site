@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'NeutralFace';
+  src: local('MyFont'), url(./fonts/NeutralFace.otf) format('opentype');
+
+}
+
+@font-face {
+  font-family: 'NeutralFaceBold';
+  src: local('MyFont'), url(./fonts/NeutralFace-Bold.otf) format('opentype');
+
+}

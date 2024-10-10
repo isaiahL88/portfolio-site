@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import { motion } from "framer-motion"
 import portrait from "../assets/portrait.jpg";
 import lassonde from "../assets/lassonde.jpg";
 import resume from "../assets/resume.png";
@@ -11,6 +12,9 @@ import uiDesign from "../assets/ui-design.svg"
 import downArrow from "../assets/arrow_down.png"
 import light from "../assets/light.png"
 import dark from "../assets/dark.png"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faJava, faReact, faJs, faNode } from '@fortawesome/free-brands-svg-icons'
+
 import { saveAs } from 'file-saver';
 
 
@@ -77,18 +81,25 @@ const Home = () => {
                     <div className='flex-col flex items-center'>
                         <img src={portrait} className='rounded-full object-cover w-80 h-80' />
                         <h1 id="title">Isaiah Linares</h1>
-                        <p id="intro-about" className="about">
+                        <p id="intro-about" className="about font-NF">
                             A self-starter, who's passionate about creating<br></br> applications that people enjoy using.
                         </p>
                     </div>
                     <div className='w-0 h-1/2 border-solid border-2 border-black'></div>
-                    <div>
-                        <p className='text-5xl'>My Stack</p>
+                    <div className='w-2/5'>
+
+                        <div id="rotator">
+                            <FontAwesomeIcon id="java-button" className="tech-button" icon={faJava} size="10x" />
+                            <FontAwesomeIcon id="react-button" className="tech-button" icon={faReact} size="7x" />
+                            <FontAwesomeIcon id="js-button" className="tech-button" icon={faJs} size="7x" />
+                            <FontAwesomeIcon id="node-button" className="tech-button" icon={faNode} size="7x" />
+                        </div>
+
                     </div>
                 </div>
 
             </div>
-            <button id={darkLight === "light" ? "down-button" : "down-button-dark"} onClick={handleAbout}><img src={downArrow}></img></button>
+            <button id={darkLight === "light" ? "down-button" : "down-button-dark"} onClick={handleAbout}>My Work</button>
             <div id='about-page' ref={aboutRef} className='home-page'>
                 <h1 className='subject'>About Me</h1>
                 <div id='about-div' className='home-div'>
@@ -136,18 +147,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <h3 id='arrowHeader'>Click below to browse some of my work</h3>
-            <button id={darkLight === "light" ? "down-button-normal" : "down-button-dark-normal"} ><img src={downArrow}></img></button>
-            <div id='button-container'>
-                <button className='main-button' id='proj-button' onClick={handleShowProj}>
-                    <h1>Personal Projects / Competitions</h1>
-                    <img src={coding} />
-                </button>
-                <button className='main-button' id='web-button' onClick={handleShowWeb}>
-                    <h1>Web Development</h1>
-                    <img id='ui-img' src={uiDesign} />
-                </button>
-            </div >
             {showProj === "proj" ? <Projects ref={projRef} /> : <></>}
             {showProj === "web" ? <WebProjects ref={webRef} /> : <></>}
             <Footer />

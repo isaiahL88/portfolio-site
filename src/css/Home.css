@@ -13,6 +13,7 @@
 
 #title {
     font-size: 60px;
+    font-family: "NeutralFaceBold";
 }
 
 .header2 {
@@ -156,12 +157,12 @@ a:hover {
 }
 
 .lightHome {
-    background: linear-gradient(225deg, #49a09d, #5f2c82);
+    background: linear-gradient(225deg, #f8ffff, #b9f0f9);
 
 }
 
 .darkHome {
-    background: linear-gradient(225deg, #082449, #2c1739);
+    background: linear-gradient(225deg, #082449, #1a0e22);
 
 }
 
@@ -173,6 +174,106 @@ a:hover {
     margin-bottom: 2em;
 }
 
+
+
+#java-button {
+    top: -.25rem;
+    right: -.25rem;
+}
+
+#react-button {
+    top: -.25rem;
+    left: -.25rem;
+}
+
+#js-button {
+    bottom: -.25rem;
+    right: -.25rem;
+}
+
+#node-button {
+    bottom: -.25rem;
+    left: -.25rem;
+}
+
+.tech-button {
+    position: absolute;
+    content: '';
+    display: block;
+    height: 8rem;
+    width: 8rem;
+    animation: inherit;
+    animation-direction: reverse;
+}
+
+#rotator {
+    position: relative;
+    width: 22rem;
+    height: 22rem;
+    animation: rotations 20s linear infinite;
+    border: 0px black solid;
+    border-radius: 50%;
+    margin: 3rem;
+}
+
+.tech-button:hover {
+    transition: ease-in-out;
+    -webkit-box-shadow: 13px 7px 41px 8px rgba(119, 217, 242, 1);
+    -moz-box-shadow: 13px 7px 41px 8px rgba(119, 217, 242, 1);
+    box-shadow: 13px 7px 41px 8px rgba(119, 217, 242, 1);
+    animation: rotations 20s linear infinite techHover 0.125s linear;
+}
+
+#rotator-text {
+    animation: inherit;
+    animation-direction: reverse;
+
+}
+
+@keyframes techHover {
+    initial {
+        scale: .75;
+    }
+
+    50% {
+        scale: 1.15;
+    }
+
+    100% {
+        scale: 1;
+
+    }
+}
+
+@keyframes rotations {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+
+@keyframes techMove {
+    0% {
+        translate: 10px -20px;
+    }
+
+    25% {
+        translate: 10px -40px;
+
+    }
+
+    60% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        translate: 10px -40px;
+    }
+
+    100% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        translate: 40px -20px;
+    }
+}
 
 @-webkit-keyframes breathing {
     0% {
