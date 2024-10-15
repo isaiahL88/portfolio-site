@@ -6,6 +6,11 @@
   text-align: center;
 }
 
+html {
+
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
 
 body {
   background-color: #282c34;
@@ -60,17 +65,18 @@ body {
 }
 
 /* Smooth Scroll */
-/* [data-scrollbar] {
+[data-scrollbar] {
   height: 100vh;
   overflow: hidden;
 
   .home-page {}
 
-  .scrollbar-track.scrollbar-track-y {
+  .scrollbar-track .scrollbar-track-y {
     background: rgb(122, 122, 122);
 
     .scrollbar-thumb-y {
       background: rgb(52, 52, 52);
     }
   }
-}  */
+}
+

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { motion } from "framer-motion"
+import { backIn, easeInOut, motion, use } from "framer-motion"
 import portrait from "../assets/portrait.jpg";
 import lassonde from "../assets/lassonde.jpg";
 import resume from "../assets/resume.png";
@@ -13,7 +13,8 @@ import downArrow from "../assets/arrow_down.png"
 import light from "../assets/light.png"
 import dark from "../assets/dark.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faJava, faReact, faJs, faNode } from '@fortawesome/free-brands-svg-icons'
+import { faJava, faReact, faJs, faNode, faAws } from '@fortawesome/free-brands-svg-icons'
+
 
 import { saveAs } from 'file-saver';
 
@@ -24,7 +25,12 @@ const Home = () => {
     const [darkLight, setDarkLight] = useState("light");
     const projRef = useRef(null);
     const webRef = useRef(null);
-    const aboutRef = useRef(null);
+    const workRef = useRef(null);
+
+    useEffect(() => {
+        let deg = 360;
+
+    }, [])
 
     //Handles the state variable representing wether web or project section is showing
     //Also handles the automatic crolling
@@ -58,8 +64,8 @@ const Home = () => {
         });
     }
 
-    const handleAbout = () => {
-        aboutRef.current.scrollIntoView({
+    const handleWork = () => {
+        workRef.current.scrollIntoView({
             behavior: 'smooth'
         });
     }
@@ -79,76 +85,184 @@ const Home = () => {
             <div id='home-page' className='home-div home-page'>
                 <div className='flex-row flex items-center h-full w-full justify-evenly'>
                     <div className='flex-col flex items-center'>
-                        <img src={portrait} className='rounded-full object-cover w-80 h-80' />
-                        <h1 id="title">Isaiah Linares</h1>
-                        <p id="intro-about" className="about font-NF">
+                        <motion.img src={portrait} className='rounded-full object-cover w-80 h-80 border-2 border-black'
+                            initial={{
+                                x: 0,
+                                scale: 0
+                            }}
+                            animate={{
+                                scale: 1.3,
+                            }}
+                            transition={{
+                                duration: 1,
+                                ease: 'backInOut',
+                            }}
+                        />
+                        <motion.h1 id="title"
+                            initial={{
+                                x: 0
+                            }}
+                            animate={{
+                                x: [-1000, 20, 0]
+                            }}
+                            transition={{
+                                duration: 1,
+                                ease: 'backIn',
+                                times: [0, 0.8, 1],
+                                delay: 1
+                            }}
+                        >Isaiah Linares</motion.h1>
+                        <motion.p id="intro-about" className="about font-NF"
+                            initial={{
+                                x: 0
+                            }}
+                            animate={{
+                                x: [-1000, 0]
+                            }}
+                            transition={{
+                                duration: 1,
+                                ease: 'backIn',
+                                times: [0, 1],
+                                delay: 1.8
+                            }}
+                        >
                             A self-starter, who's passionate about creating<br></br> applications that people enjoy using.
-                        </p>
+                        </motion.p>
                     </div>
                     <div className='w-0 h-1/2 border-solid border-2 border-black'></div>
-                    <div className='w-2/5'>
+                    <div className='w-2/5' onH>
 
                         <div id="rotator">
-                            <FontAwesomeIcon id="java-button" className="tech-button" icon={faJava} size="10x" />
-                            <FontAwesomeIcon id="react-button" className="tech-button" icon={faReact} size="7x" />
-                            <FontAwesomeIcon id="js-button" className="tech-button" icon={faJs} size="7x" />
-                            <FontAwesomeIcon id="node-button" className="tech-button" icon={faNode} size="7x" />
+                            <FontAwesomeIcon
+                                className="tech-button"
+                                icon={faJava}
+                                size="10x"
+                                style={{
+                                    position: "absolute",
+                                    top: "7rem", left: "18rem",
+
+                                }}
+                            />
+                            <FontAwesomeIcon
+                                className="tech-button"
+                                icon={faReact}
+                                size="7x"
+                                style={{
+                                    position: "absolute",
+                                    left: "10.4rem", bottom: "17.46rem"
+                                }}
+                            />
+                            <FontAwesomeIcon
+                                className="tech-button"
+                                icon={faJs}
+                                size="7x"
+                                style={{
+                                    position: "absolute",
+                                    left: "-1.9rem", bottom: "13.47rem"
+                                }}
+                            />
+                            <FontAwesomeIcon
+                                className="tech-button"
+                                icon={faNode}
+                                size="7x"
+                                style={{
+                                    position: "absolute",
+                                    left: "-1.9rem", bottom: "0.53rem"
+                                }}
+                            />
+                            <FontAwesomeIcon
+                                className="tech-button"
+                                icon={faAws}
+                                size="7x"
+                                style={{
+                                    position: "absolute",
+                                    left: "10.4rem", bottom: "-3.46rem"
+                                }}
+                            />
+
                         </div>
+                        {/* <div id="rotator">
+                            <FontAwesomeIcon
+                                className="tech-button"
+                                icon={faJava}
+                                size="10x"
+                                style={{
+                                    position: "absolute",
+                                    top: "7rem", left: "18rem",
+
+                                }}
+                            />
+                            <FontAwesomeIcon
+                                className="tech-button"
+                                icon={faReact}
+                                size="7x"
+                                style={{
+                                    position: "absolute",
+                                    left: "10.4rem", bottom: "17.46rem"
+                                }}
+                            />
+                            <FontAwesomeIcon
+                                className="tech-button"
+                                icon={faJs}
+                                size="7x"
+                                style={{
+                                    position: "absolute",
+                                    left: "-1.9rem", bottom: "13.47rem"
+                                }}
+                            />
+                            <FontAwesomeIcon
+                                className="tech-button"
+                                icon={faNode}
+                                size="7x"
+                                style={{
+                                    position: "absolute",
+                                    left: "-1.9rem", bottom: "0.53rem"
+                                }}
+                            />
+                            <FontAwesomeIcon
+                                className="tech-button"
+                                icon={faAws}
+                                size="7x"
+                                style={{
+                                    position: "absolute",
+                                    left: "10.4rem", bottom: "-3.46rem"
+                                }}
+                            />
+
+                        </div> */}
 
                     </div>
                 </div>
 
             </div>
-            <button id={darkLight === "light" ? "down-button" : "down-button-dark"} onClick={handleAbout}>My Work</button>
-            <div id='about-page' ref={aboutRef} className='home-page'>
-                <h1 className='subject'>About Me</h1>
-                <div id='about-div' className='home-div'>
-                    <div className="home-child">
-                        <img src={lassonde} id='lassonde' />
-                        <h2>Education</h2>
-                        <p>Specialized Honours BSc in Computer Science 2019 - 2023</p>
-                        <p class="tiny">Lassonde School of Engineering, York University, Toronto, ON, Canada</p>
+            <button className="font-NF size-4" onClick={handleWork}>My Work</button>
+            <div className="flex flex-row h-screen w-screen">
+                <motion.div className='w-1/2 h-screen bg-amber-700'
+                    initial={{
+                        transform: "translate(-75%, 0)"
 
-                    </div>
-                    <div id='about-exp' className="home-child" style={{ flex: 0 }}>
-                        <div id='box-container'>
-                            <div className='skill-box'>
-                                <h2 className='skill-header'>Software Dev</h2>
-                                <p className='skill-paragraph'>Experience in OOP using Java, full-stack applications, and Java EE stack (Tomcat, JSP, Servlets).</p>
-                            </div>
-                            <div className='skill-box'>
-                                <h2 className='skill-header'>UX Design</h2>
-                                <p className='skill-paragraph'>Experience designing intuitive and enjoyable user experiences in different platforms such as websites, desktop apps, and mobile apps.</p>
-                            </div>
-                            <div className='skill-box'>
-                                <h2 className='skill-header'>Mobile Dev</h2>
-                                <p className='skill-paragraph'>Experience utilizing my skills in Java to create mobile applications for Android.</p>
-                            </div>
-                        </div>
-                        <h1 className='med-header'>Languages</h1>
-                        <ul id='language-list' className='horizontal-list'>
-                            <li>Java</li>
-                            <li>JavaScript</li>
-                            <li>C</li>
-                            <li>Python</li>
-                            <li>Html</li>
-                            <li>CSS</li>
-                            <li>SQL</li>
-                        </ul>
-                        <h1 className='med-header'>Frameworks / Tech</h1>
-                        <ul id='framework-list' className='horizontal-list'>
-                            <li>React</li>
-                            <li>Java EE (Tomcat / Servlets) </li>
-                            <li>AWS</li>
-                            <li>Firebase</li>
-                            <li>MySql</li>
-                            <li>Figma</li>
-                        </ul>
-                    </div>
-                </div>
+                    }}
+                    whileInView={{
+                        transform: "translate(0%, 0)"
+                    }}
+                    transition={{
+                        duration: 1.2,
+                        ease: 'easeIn'
+                    }}
+                    whileHover={{
+                        backgroundColor: "#441f03"
+                    }}
+                    whileHoverTransition={{
+                        duration: 0.01,
+                        ease: 'linear' // Adjust this to speed up the hover animation
+                    }}
+                >
+                    <h1>Web Dev</h1>
+                </motion.div>
+                <motion.div className='w-1/2 h-screen bg-red-700'>
+                    <h1></h1>
+                </motion.div>
             </div>
-            {showProj === "proj" ? <Projects ref={projRef} /> : <></>}
-            {showProj === "web" ? <WebProjects ref={webRef} /> : <></>}
             <Footer />
 
         </div >

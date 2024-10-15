@@ -10,10 +10,17 @@ import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Data from "./components/Data"
 import { Analytics } from '@vercel/analytics/react';
+import { Scrollbar } from 'smooth-scrollbar-react';
 
 function App() {
   return (
-    <>
+    <Scrollbar
+      damping={0.2}
+      plugins={{
+        overscroll: {
+          effect: 'bounce'
+        }
+      }}>
 
       <Router>
         <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' />
@@ -27,7 +34,7 @@ function App() {
           <Analytics />
         </div>
       </Router>
-    </>
+    </Scrollbar>
   );
 }
 
