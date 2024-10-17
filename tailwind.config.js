@@ -7,7 +7,8 @@ module.exports = {
     extend: {},
     fontFamily: {
       'NF': ['NeutralFace'],
-      'NFB': ['NeutralFaceBold']
+      'NFB': ['NeutralFaceBold'],
+      'Pop': ["Poppins", "sans-serif"]
     }
   },
   plugins: [],

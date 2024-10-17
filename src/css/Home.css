@@ -173,64 +173,16 @@ a:hover {
 
 
 .tech-button {
-    position: absolute;
-    content: '';
-    display: block;
     height: 8rem;
     width: 8rem;
-    transform-origin: center;
-    animation: rotations 16s linear 1s;
-    animation-iteration-count: 1;
-    animation-direction: reverse;
-}
-
-#rotator {
-    position: relative;
-    width: 22rem;
-    height: 22rem;
-    animation: rotatorGrow 2s ease-in 0s 1, rotations 16s linear 0s infinite;
-    border: 0px black solid;
-    border-radius: 50%;
-    margin: 3rem;
-}
-
-@keyframes rotations {
-    to {
-        transform: rotate(360deg)
-    }
-}
-
-@keyframes rotatorGrow {
-    from {
-        transform: scale(0);
-        -webkit-transform: scale(0);
-
-    }
-
-    to {
-        transform: scale(1.0);
-        -webkit-transform: scale(1.0);
-
-    }
-}
-
-@keyframes GFG {
-    0% {
-        transform: rotate(0deg) translateY(11rem) rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg) translateY(11rem) rotate(-360deg);
-    }
 }
 
 .tech-button:hover {
-    /* Adding transition to all properties */
-    -webkit-box-shadow: 13px 7px 41px 8px rgba(119, 217, 242, 1);
-    -moz-box-shadow: 13px 7px 41px 8px rgba(119, 217, 242, 1);
-    box-shadow: 13px 7px 41px 8px rgba(119, 217, 242, 1);
-
+    height: 8rem;
+    width: 8rem;
+    color: '#4f46e5'
 }
+
 
 #rotator-text {
     animation: inherit;
