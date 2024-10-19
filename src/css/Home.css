@@ -280,11 +280,17 @@ a:hover {
     height: 80px;
 }
 
-#dl-img {
+.dl-img {
     background: none;
-    height: 3em;
-    width: 3em;
+    height: 2em;
+    width: 2em;
+}
 
+.dl-img-dark {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(158deg) brightness(104%) contrast(102%);
+    background: none;
+    height: 2em;
+    width: 2em;
 }
 
 @media only screen and (max-width:1000px) {
