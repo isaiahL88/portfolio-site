@@ -46,7 +46,7 @@ import covidImg from "../assets/covid.png"
 import framerImg from "../assets/Framer-Motion.webp"
 
 import { saveAs } from 'file-saver';
-import animationData from '../assets/darklight.json'
+import animationData from '../assets/darklight.json';
 
 const Home = () => {
     const [showProj, setShowProj] = useState("none");
