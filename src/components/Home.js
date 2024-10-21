@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { backIn, easeInOut, motion, cubicBezier } from "framer-motion"
+import { backIn, easeInOut, motion, cubicBezier, inertia } from "framer-motion"
 import portrait from "../assets/portrait.jpg";
 import lassonde from "../assets/lassonde.jpg";
 import resume from "../assets/resume.png";
@@ -19,8 +19,30 @@ import Lottie from 'react-lottie'
 import laptopAnimation from '../lotties/web_laptop.json'
 import phoneAnim from '../lotties/newDesign.json'
 import isaiahRes from '../assets/Isaiah_Linares_Resume.pdf'
-
-
+import ReactSVG from '../assets/React.svg'
+import JavaSVG from '../assets/Java.svg'
+import JSsvg from '../assets/JavaScript.svg'
+import Android from '../assets/Android.svg'
+import Apache from '../assets/Apache Tomcat.svg'
+import AWS from '../assets/AWS.svg'
+import CSS from '../assets/CSS3.svg'
+import FirebaseSVG from '../assets/Firebase.svg'
+import JQuerySVG from '../assets/jQuery.svg'
+import MySQL from '../assets/MySQL.svg'
+import TensorFlow from '../assets/TensorFlow.svg'
+import WooCommerce from '../assets/WooCommerce.svg'
+import Tailwind from '../assets/Tailwind CSS.svg'
+import HTML from '../assets/HTML5.svg'
+import WP from '../assets/wordpress.png'
+import nunuLogo from "../assets/nunusFamily.png"
+import madeRich from "../assets/madeRich.png"
+import lin from "../assets/mobile-lin.png"
+import mapsImg from "../assets/Maps.png"
+import chartSVG from "../assets/chart.svg"
+import liftImg from "../assets/lift.jpg"
+import laptopImg from "../assets/store.png"
+import musicXMLImg from "../assets/music.jpg"
+import covidImg from "../assets/covid.png"
 
 import { saveAs } from 'file-saver';
 
@@ -34,6 +56,9 @@ const Home = () => {
     const projRef = useRef(null);
     const webRef = useRef(null);
     const workRef = useRef(null);
+    const [isMobile, setisMobile] = useState(false);
+    //Either, "", "Project", or "Web Dev"
+    const [workQuery, setworkQuery] = useState("");
 
     const laptopAnimOptions = {
         loop: true,
@@ -59,41 +84,85 @@ const Home = () => {
             name: 'Maps Rentals',
             type: 'Web Dev',
             text: 'Designed and deployed a website for Maps Rentals, a new and innovative real estate admin service that solves a common pain-point for landlords.',
-            tech: ["react", "tailwind", "javascript", "css"]
+            tech: ['TW', 'React', 'HTML', 'CSS'],
+            image: mapsImg
         },
         {
             name: 'Shop Made Rich',
             type: 'Web Dev',
-            text: '',
-            tech: ['Word Press', 'WooCommerce']
+            text: 'Developed an eccomere website and product designer for Made Rich T-Shirt Printing. This t-shirt designer allows users to upload designs, upload text, and select premade designs to create unique products uncluding hats, t-shirts, hoodies, tanktops, and more. I utilized the Wordpress Platform to create this site which allows my client to manage their eccomerce store and receive custom designs through the Woo-Comerce Plugin CMS.',
+            tech: ['WP', 'WooCommerce'],
+            image: madeRich
         },
         {
             name: 'Linares Upholstery',
             type: 'Web Dev',
             text: 'Designed, developed, and deployed a website for Linares Upholstery to showcase their services, portfolio of completed restorations, and quality of sourced materials. I also improved customer outreach by using good SEO practices and creating facebook adds for the company.',
-            tech: ['React', 'JavaScript', 'HMTL', 'CSS']
+            tech: ['React', 'JS', 'Java'],
+            image: lin
         },
         {
             name: "Nunu's Family Cuts",
             type: 'Web Dev',
             text: "Improved customer base and branding by designing a local hair salon's website, banner, flyers, and business cards. I also quickly increased customer outreach by advertising the website using good SEO practices and Facebook advertisements and using Canada Post services to mail out flyers.",
-            tech: ['JavaScript', 'HTML', 'CSS']
+            tech: ['JS', 'HTML', 'CSS'],
+            image: nunuLogo
         },
         {
             name: "Lift App",
             type: 'Project',
             text: "Allows powerlifters, bodybuilders, and fitness enthusiasts to create and perfect their workout routines through an intuitive and fast user interface. Users can share their accumulated knowledge, learn from others by exchanging routines with friends, and discover new workouts through the app. Lift also allows users to log their sessions during every workout to see exactly how they performed each day. Another notable feature is the ability to track personal records for each Olympic lift, offering insights into one's progress over time. Users have the option to display this information on their personal profiles as well. I developed this app myself using Java / Material3 and utilized FirebaseAuth and FirebaseFirestore for the backend. I recently released the first production version on the Google Play Store, please download my app and try it out using the link above!",
-            tech: ['Java', 'Firebase', 'Android']
+            tech: ['Java', 'Firebase', 'Android'],
+            video: 'https://www.youtube.com/embed/IYTIsCKQwFU?si=_Km10BT7ysp9bUXf'
         },
         {
             name: "Smart Checkout App",
             type: 'Project',
             text: "Streamlined grocery customer experience through no-cashier interaction shopping using computer vision. We advanced into the finals and placed first runner-up in the Smart Business category. I utilized the TensorFlowLite Computer Vision framework for our item classification and built our inventory backend using the Firestore Realtime Database.",
-            tech: ['Java', 'Android', 'Firebase', 'TensorFlow']
+            tech: ['Java', 'Android', 'Firebase', 'TensorFlow'],
+            video: 'https://www.youtube.com/embed/lcolLWlyr20'
+        },
+        {
+            name: "JIL E-Commerce Store",
+            type: 'Project',
+            text: "For this project, our team designed, implemented, and deployed a fully functional e-commerce system. Our service allows users to enter the site from any computer, browse and add products to their cart, and simulate a checkout once they are satisfied with their purchase. There is also a registration and login system, as well as additional capabilities for administrators such as viewing and filtering past orders.\nMy contribution was creating Servlet/JSP pages, debugging SQL queries (DAOs), and creating an AWS Elastic Beanstalk deployment using the TomcatV10.1/MySQL platform. The site is live at the link above, feel free to create an account, complete an order, and checkout (don't worry it will not charge you 😄).",
+            tech: ['Java', 'Apache', 'MySQL', 'AWS'],
+            image: laptopImg
+        },
+        {
+            name: "MusicXML Parser",
+            type: 'Project',
+            text: "A Java application that converts ASCII tablature (.txt) into MusicXML (.xml) files using a simple and intuitive GUI. This application is compatible with drums, guitar, and bass, and takes into account notation specific to each instrument. The generated MusicXML files can then be used in other notation software such as MuseScore.",
+            tech: ['Java'],
+            image: musicXMLImg
+        },
+        {
+            name: "Covid-19 Ontario",
+            type: 'Project',
+            text: "Web app to give recent info on Covid-19 in Ontario, originally submitted for the YU Hacks 2021 event by Isaiah Linares, Leong Li, and Chun-Kit Chung. This app visualizes statistics on Cases, Tests, Vaccinations, Boosters, and Hospitalizations with different types of charts. Also features a vaccination center lookup for every region in Ontario. (uses depreciated APIs, but still live).",
+            tech: ['JS', 'jQuery', 'ChartJS'],
+            image: covidImg
         }
-
     ]
 
+    const techImages = {
+        'React': <img width={50} height={50} src={ReactSVG} />,
+        'Java': <img width={50} height={50} src={JavaSVG} />,
+        'JS': <img width={50} height={50} src={JSsvg} />,
+        'Android': <img width={50} height={50} src={Android} />,
+        'Apache': <img width={50} height={50} src={Apache} />,
+        'AWS': <img width={50} height={50} src={AWS} />,
+        'CSS': <img width={50} height={50} src={CSS} />,
+        'Firebase': <img width={50} height={50} src={FirebaseSVG} />,
+        'jQuery': <img width={50} height={50} src={JQuerySVG} />,
+        'MySQL': <img width={50} height={50} src={MySQL} />,
+        'TensorFlow': <img width={50} height={50} src={TensorFlow} />,
+        'WooCommerce': <img width={50} height={50} src={WooCommerce} />,
+        'TW': <img width={50} height={50} src={Tailwind} />,
+        'HTML': <img width={50} height={50} src={HTML} />,
+        'WP': <img width={50} height={50} src={WP} />,
+        'ChartJS': <img width={50} height={50} src={chartSVG} />
+    };
 
     useEffect(() => {
         let deg = 360;
@@ -207,8 +276,8 @@ const Home = () => {
                     </div>
                     <div className='w-0 h-5/6 border-solid border-2 border-black rounded'></div>
                     <div className='w-2/5'>
-
-                        <div className='flex flex-row'>
+                        <h1 className='text-5xl underline font-NFB mb-2'>My Tech Stack</h1>
+                        <div className='flex flex-row [&_div]:p-1'>
                             <motion.div
                                 className='z-10 buttonBox'
                                 content=' '
@@ -291,9 +360,19 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <motion.button className="font-NF size-14 z-10 w-auto h-auto text-5xl mt-6 border-black border-2 rounded-2xl p-2 text-black hover:text-indigo-600 hover:border-indigo-600" onClick={handleWork}
+                <motion.button className="font-NF size-14 z-10 w-auto h-auto text-5xl mt-6 border-black border-2 rounded-2xl p-2 text-black hover:text-indigo-600 hover:border-indigo-600 select-none" onClick={handleWork}
                     whileHover={{
                         scale: 1.2
+                    }}
+
+                    animate={{
+                        scale: [1, 1.2, 1],
+                    }}
+                    transition={{
+                        duration: 5,
+                        repeat: Infinity,
+                        ease: 'easeInOut'
+
                     }}
                 >My Work</motion.button>
 
@@ -340,6 +419,9 @@ const Home = () => {
                     }}
                     onMouseEnter={() => { setLaptopPlay(false) }}
                     onMouseLeave={() => { setLaptopPlay(true) }}
+                    onClick={() => {
+
+                    }}
                 >
                     <h1 className='text-6xl font-NFB'>Projects</h1>
                     <Lottie
@@ -350,18 +432,38 @@ const Home = () => {
                     />
                 </motion.div>
             </div>
-            <div className='flex flex-row h-screen w-screen'>
-                {projects.forEach(project => (
-                    <motion.div className='flex=col border-solid border-2 border-black rounded-lg w-1/3 h-1/4'>
-                        <div className='flex-row justify-between w-10'>
-                            <h1>{project.name}</h1>
-                        </div>
-                        <div className='w-full h-0 border-solid border-2 border-black rounded' />
-                        <p>{project.text}</p>
-                        <div className='flex-row w-full w-14 justify-evenly'>
+            <div className='flex flex-col h-auto w-screen items-center mt-10'>
+                {projects.map((project, i) => (
+                    <motion.div className='flex flex-row justify-center w-3/5 items-center m-24'>
+                        <motion.div className={'flex=col border-solid border-2 border-black rounded-lg w-1/2 h-1/4 m-4' + (i % 2 == 0 ? ' order-first' : ' order-last')}
+                        // whileInView={i % 2 === 0 ?
 
-                        </div>
+                        // }
+                        >
+                            <div className='flex-row justify-between max-w-64 text-left ml-2'>
+                                <h1>{project.name}</h1>
+                            </div>
+                            <div className='w-full h-0 border-solid border-2 border-black' />
+                            <p className='p-3 text-base'>{project.text}</p>
+                            <div className='flex flex-row w-full p-2'>
+                                {Array.isArray(project.tech) && project.tech.map(tech => (
+                                    techImages[tech]
+                                ))}
+                            </div>
+                        </motion.div>
+                        {project.image ? <motion.img className='w-[30rem] m-4 bg-white h-96 object-contain order-3 border-[1px] border-black rounded-lg' src={project.image} />
+                            :
+
+                            project.video ? <iframe width="475" height="400"
+                                id={project.name + " video"}
+                                src={project.video}
+                                title={project.name}
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen />
+                                : <></>}
                     </motion.div>
+
                 ))}
             </div>
 
