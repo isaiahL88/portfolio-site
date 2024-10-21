@@ -264,6 +264,13 @@ a:hover {
     animation: breathing 1.5s ease-out infinite normal;
 }
 
+#darkLightLogo {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 200px;
+}
+
 #resume-button {
     position: absolute;
     top: 10px;
@@ -294,6 +301,11 @@ a:hover {
 }
 
 @media only screen and (max-width:1000px) {
+    #home-root {
+        display: flex;
+        flex-direction: column;
+    }
+
     #portrait {
         width: 9em;
         height: 9em;
@@ -355,12 +367,11 @@ a:hover {
     }
 
     #about-div {
-        margin-top: 100vh;
         flex-direction: column;
     }
 
     #about-page {
-        height: 200vh;
+        height: 290vh;
     }
 
     #lassonde {
@@ -369,9 +380,12 @@ a:hover {
         object-fit: cover;
     }
 
-    #button-container {
-        margin-top: 30em;
+    .main-button {
+        width: 10em;
+    }
 
+    #button-container {
+        flex-direction: row;
     }
 
     .horizontal-list li {
