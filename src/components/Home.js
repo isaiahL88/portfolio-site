@@ -46,7 +46,6 @@ import covidImg from "../assets/covid.png"
 import framerImg from "../assets/Framer-Motion.webp"
 
 import { saveAs } from 'file-saver';
-import Lottie, { LottieRefCurrentProps } from "lottie-react"
 import animationData from '../assets/darklight.json'
 
 const Home = () => {
