@@ -1,7 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
 
+html {
+
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
 
 body {
   background-color: #282c34;
@@ -14,7 +23,7 @@ body {
   font-family: 'Nunito';
   font-size: 22px;
   color: rgb(0, 0, 0);
-  background: linear-gradient(225deg, #49a09d, #5f2c82);
+  background: linear-gradient(225deg, #ffffff, #5f2c82);
   overflow-x: hidden !important;
   /* #efcb90, #61605e */
 
@@ -55,7 +64,6 @@ body {
   font-style: italic;
 }
 
-
 /* Smooth Scroll */
 [data-scrollbar] {
   height: 100vh;
@@ -63,7 +71,7 @@ body {
 
   .home-page {}
 
-  .scrollbar-track.scrollbar-track-y {
+  .scrollbar-track .scrollbar-track-y {
     background: rgb(122, 122, 122);
 
     .scrollbar-thumb-y {
@@ -71,3 +79,4 @@ body {
     }
   }
 }
+
