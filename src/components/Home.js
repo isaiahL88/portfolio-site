@@ -44,6 +44,7 @@ import laptopImg from "../assets/store.png"
 import musicXMLImg from "../assets/music.jpg"
 import covidImg from "../assets/covid.png"
 import framerImg from "../assets/Framer-Motion.webp"
+import material from "../assets/material-ui.png"
 
 import { saveAs } from 'file-saver';
 import animationData from '../assets/darklight.json';
@@ -87,69 +88,84 @@ const Home = () => {
             name: 'Maps Rentals',
             type: 'Web Dev',
             text: 'I am currently partnering with MAPS Rentals Inc., a boutique property leasing firm in Ontario, to redefine the leasing experience through innovative digital solutions. By leveraging cutting-edge web development practices and creative brand-building strategies, I am helping position MAPS Rentals as a leader in modern property management.',
-            tech: ['TW', 'React', 'HTML', 'CSS', 'FM'],
+            tech: ['TW', 'React', 'HTML', 'CSS', 'FM', 'Material'],
             image: mapsImg,
-            link: <p className='font-NF text-sm'>Coming Soon</p>
+            link: <a href='https://www.mapsrentals.ca/' target="_blank" className='font-NF text-sm font-black text-[#5D3FD3]'>Web App</a>
         },
         {
             name: 'Shop Made Rich',
             type: 'Web Dev',
             text: 'Developed an eccomere website and product designer for Made Rich T-Shirt Printing. This t-shirt designer allows users to upload designs, upload text, and select premade designs to create unique products uncluding hats, t-shirts, hoodies, tanktops, and more. I utilized the Wordpress Platform to create this site which allows my client to manage their eccomerce store and receive custom designs through the Woo-Comerce Plugin CMS.',
             tech: ['WP', 'WooCommerce'],
-            image: madeRich
+            image: madeRich,
+            link: <p className='font-NF text-sm'>Currently Closed</p>
+
         },
         {
             name: 'Linares Upholstery',
             type: 'Web Dev',
             text: 'Designed, developed, and deployed a website for Linares Upholstery to showcase their services, portfolio of completed restorations, and quality of sourced materials. I also improved customer outreach by using good SEO practices and creating facebook adds for the company.',
             tech: ['React', 'JS', 'Java'],
-            image: lin
+            image: lin,
+            link: <a href='https://upholstery-site.vercel.app/' target="_blank" className='font-NF text-sm font-black text-[#5D3FD3]'>Web App</a>
         },
         {
             name: "Nunu's Family Cuts",
             type: 'Web Dev',
             text: "Improved customer base and branding by designing a local hair salon's website, banner, flyers, and business cards. I also quickly increased customer outreach by advertising the website using good SEO practices and Facebook advertisements and using Canada Post services to mail out flyers.",
             tech: ['JS', 'HTML', 'CSS'],
-            image: nunuLogo
+            image: nunuLogo,
+            link: <a href='https://nunusfamilycuts.com/' target="_blank" className='font-NF text-sm font-black text-[#5D3FD3]'>Web App</a>
+
         },
         {
             name: "Lift App",
             type: 'Project',
             text: "Allows powerlifters, bodybuilders, and fitness enthusiasts to create and perfect their workout routines through an intuitive and fast user interface. Users can share their accumulated knowledge, learn from others by exchanging routines with friends, and discover new workouts through the app. Lift also allows users to log their sessions during every workout to see exactly how they performed each day. Another notable feature is the ability to track personal records for each Olympic lift, offering insights into one's progress over time. Users have the option to display this information on their personal profiles as well. I developed this app myself using Java / Material3 and utilized FirebaseAuth and FirebaseFirestore for the backend. I recently released the first production version on the Google Play Store, please download my app and try it out using the link above!",
             tech: ['Java', 'Firebase', 'Android'],
-            video: 'https://www.youtube.com/embed/IYTIsCKQwFU?si=_Km10BT7ysp9bUXf'
+            video: 'https://www.youtube.com/embed/IYTIsCKQwFU?si=_Km10BT7ysp9bUXf',
+            link: <a href='https://play.google.com/store/apps/details?id=com.isaiah88&pcampaignid=web_share' target="_blank" className='font-NF text-sm font-black text-[#5D3FD3]'>Google Play Store</a>
+
         },
         {
             name: "Smart Checkout App",
             type: 'Project',
             text: "Streamlined grocery customer experience through no-cashier interaction shopping using computer vision. We advanced into the finals and placed first runner-up in the Smart Business category. I utilized the TensorFlowLite Computer Vision framework for our item classification and built our inventory backend using the Firestore Realtime Database.",
             tech: ['Java', 'Android', 'Firebase', 'TensorFlow'],
-            video: 'https://www.youtube.com/embed/lcolLWlyr20'
+            video: 'https://www.youtube.com/embed/lcolLWlyr20',
+            link: <a href='https://www.linkedin.com/posts/isaiah-linares_over-the-past-few-days-me-and-my-team-coden-activity-7061063369469923328--7Cp?utm_source=share&utm_medium=member_desktop' target="_blank" className='font-NF text-sm font-black text-[#5D3FD3]'>More Info</a>
+
         },
         {
             name: "JIL E-Commerce Store",
             type: 'Project',
             text: "For this project, our team designed, implemented, and deployed a fully functional e-commerce system. Our service allows users to enter the site from any computer, browse and add products to their cart, and simulate a checkout once they are satisfied with their purchase. There is also a registration and login system, as well as additional capabilities for administrators such as viewing and filtering past orders.\nMy contribution was creating Servlet/JSP pages, debugging SQL queries (DAOs), and creating an AWS Elastic Beanstalk deployment using the TomcatV10.1/MySQL platform. The site is live at the link above, feel free to create an account, complete an order, and checkout (don't worry it will not charge you 😄).",
             tech: ['Java', 'Apache', 'MySQL', 'AWS'],
-            image: laptopImg
+            image: laptopImg,
+            link: <a href='http://jil2.us-east-2.elasticbeanstalk.com/' target="_blank" className='font-NF text-sm font-black text-[#5D3FD3]'>Web App</a>
+
         },
         {
             name: "MusicXML Parser",
             type: 'Project',
             text: "A Java application that converts ASCII tablature (.txt) into MusicXML (.xml) files using a simple and intuitive GUI. This application is compatible with drums, guitar, and bass, and takes into account notation specific to each instrument. The generated MusicXML files can then be used in other notation software such as MuseScore.",
             tech: ['Java'],
-            image: musicXMLImg
+            image: musicXMLImg,
+            link: <a href='https://github.com/alborzdev/TAB2XML' target="_blank" className='font-NF text-sm font-black text-[#5D3FD3]'>Git Hub Repo</a>
+
         },
         {
             name: "Covid-19 Ontario",
             type: 'Project',
             text: "Web app to give recent info on Covid-19 in Ontario, originally submitted for the YU Hacks 2021 event by Isaiah Linares, Leong Li, and Chun-Kit Chung. This app visualizes statistics on Cases, Tests, Vaccinations, Boosters, and Hospitalizations with different types of charts. Also features a vaccination center lookup for every region in Ontario. (uses depreciated APIs, but still live).",
             tech: ['JS', 'jQuery', 'ChartJS'],
-            image: covidImg
+            image: covidImg,
+            link: <a href='https://covid-19ontario.vercel.app/' target="_blank" className='font-NF text-sm font-black text-[#5D3FD3]'>Web App</a>
         }
     ]
 
     const techImages = {
+        'Material': <img width={50} height={50} src={material} />,
         'FM': <img width={50} height={50} src={framerImg} />,
         'React': <img width={50} height={50} src={ReactSVG} />,
         'Java': <img width={50} height={50} src={JavaSVG} />,
