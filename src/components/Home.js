@@ -58,6 +58,7 @@ const Home = () => {
     const webRef = useRef(null);
     const workRef = useRef(null);
     const workQueryRef = useRef(null);
+    const textDescr = "A self-starter, who's passionate about creating applications that people enjoy using.".split(' ');
 
     const isSmallViewport = useIsSmallViewport();
 
@@ -283,7 +284,7 @@ const Home = () => {
                                             delay: 0.5
                                         }}
                                     >Isaiah Linares</motion.h1>
-                                    <motion.p id="intro-about" className="about font-NF"
+                                    {/* <motion.p id="intro-about" className="about font-NF"
                                         initial={{
                                             x: 0
                                         }}
@@ -298,7 +299,23 @@ const Home = () => {
                                         }}
                                     >
                                         A self-starter, who's passionate about creating<br></br> applications that people enjoy using.
-                                    </motion.p>
+                                    </motion.p> */}
+                                    <p className='w-[700px] text-center about font-NF'>
+                                        {textDescr.map((el, i) => (
+                                            <motion.span
+                                                className=''
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                transition={{
+                                                    duration: 2.0,
+                                                    delay: (i / 10) + 2,
+                                                }}
+                                                key={i}
+                                            >
+                                                {el}{" "}
+                                            </motion.span>
+                                        ))}
+                                    </p>
                                 </div>
                                 <div className='w-0 h-5/6 border-solid border-2 border-black rounded'></div>
                                 <div className='w-2/5 h-full flex flex-col justify-center'>
