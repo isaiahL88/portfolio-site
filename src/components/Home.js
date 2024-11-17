@@ -87,7 +87,7 @@ const Home = () => {
         {
             name: 'Maps Rentals',
             type: 'Web Dev',
-            text: 'I am currently partnering with MAPS Rentals Inc., a boutique property leasing firm in Ontario, to redefine the leasing experience through innovative digital solutions. By leveraging cutting-edge web development practices and creative brand-building strategies, I am helping position MAPS Rentals as a leader in modern property management.',
+            text: 'I partnered with MAPS Rentals Inc., a boutique property leasing firm in Ontario, to transform their leasing experience through innovative digital solutions. My work included designing and developing a custom web application using cutting-edge frameworks like React, Tailwind CSS, Material UI, and Framer Motion to deliver an engaging and modern user interface. Beyond development, I provided strategic consulting to streamline their client management pipeline by integrating CRM systems, improving operational efficiency and customer engagement. This collaboration has positioned MAPS Rentals as a forward-thinking leader in the property management industry.',
             tech: ['TW', 'React', 'HTML', 'CSS', 'FM', 'Material'],
             image: mapsImg,
             link: <a href='https://www.mapsrentals.ca/' target="_blank" className='font-NF text-sm font-black text-[#5D3FD3]'>Web App</a>
