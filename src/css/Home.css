@@ -11,11 +11,6 @@
     list-style-type: none;
 }
 
-#title {
-    font-size: 60px;
-    font-family: "NeutralFaceBold";
-}
-
 
 .header2 {
     text-decoration: underline;
@@ -321,24 +316,10 @@ a:hover {
         order: 2;
     }
 
-    #title {
-        font-size: 50px;
-        margin-bottom: 0px;
-        padding-bottom: 0px;
-    }
-
     .about {
         font-size: 16px;
         margin-top: 0px;
         padding-top: 0px;
-    }
-
-    #home-page {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        width: 100vw;
-        height: 70vh;
     }
 
     #portrait-box {
