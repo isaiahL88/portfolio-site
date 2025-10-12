@@ -320,7 +320,7 @@ const Home = () => {
                     </div>
                     {!isSmallViewport ? <div className='lg:w-0 lg:h-5/6 border-solid h-0 w-0 border-2 border-black rounded'></div> : <></>}
                     <div className='lg:w-2/5 lg:h-full w-[100vw] h-28 items-center flex flex-col justify-center'>
-                        <h1 className='lg:text-6xl text-3xl underline font-NFB mb-2'>My Tech Stack</h1>
+                        <h1 className='lg:text-6xl text-3xl underline font-NFB mb-2 self-center'>My Tech Stack</h1>
                         <div className='flex flex-row [&_div]:p-1'>
                             <motion.div
                                 className='z-10'
@@ -334,9 +334,9 @@ const Home = () => {
 
                             >
                                 <FontAwesomeIcon
-                                    className="w-25 z-20"
+                                    className="ml-[-20px] lg:w-28 w-12  z-20"
                                     icon={faJava}
-                                    size="5x"
+                                    size={isSmallViewport ? "2xl" : "5x"}
                                 />
                             </motion.div>
                             <motion.div
@@ -347,9 +347,9 @@ const Home = () => {
 
                             >
                                 <FontAwesomeIcon
-                                    className="w-25"
+                                    className="lg:w-28 w-12"
                                     icon={faReact}
-                                    size="5x"
+                                    size={isSmallViewport ? '2xl' : '5x'}
 
                                 />
                             </motion.div>
@@ -359,9 +359,9 @@ const Home = () => {
                                     color: '#4f46e5'
                                 }}>
                                 <FontAwesomeIcon
-                                    className="w-25"
+                                    className="lg:w-28 w-12"
                                     icon={faJs}
-                                    size="5x"
+                                    size={isSmallViewport ? '2xl' : '5x'}
                                     whileHover={{
                                         scale: 1.2,
                                         color: '#4f46e5'
@@ -375,9 +375,9 @@ const Home = () => {
                                     color: '#4f46e5'
                                 }}>
                                 <FontAwesomeIcon
-                                    className="w-25"
+                                    className="lg:w-28 w-12"
                                     icon={faNode}
-                                    size="5x"
+                                    size={isSmallViewport ? '2xl' : '5x'}
                                     whileHover={{
                                         scale: 1.2,
                                         color: '#4f46e5'
@@ -391,9 +391,9 @@ const Home = () => {
                                     color: '#4f46e5'
                                 }}>
                                 <FontAwesomeIcon
-                                    className="w-25"
+                                    className="lg:w-28 w-12"
                                     icon={faAws}
-                                    size="5x"
+                                    size={isSmallViewport ? '2xl' : '5x'}
                                     whileHover={{
                                         scale: 1.2,
                                         color: '#4f46e5'
@@ -461,7 +461,8 @@ const Home = () => {
 
                     }}
                     whileInView={{
-                        transform: "translate(0%, 0)"
+                        transform: "translate(0%, 0)",
+                        backgroundColor: isSmallViewport ? '#38bdf8' : '#0c4a6e'
                     }}
                     transition={{
                         duration: 0.3,
@@ -497,6 +498,9 @@ const Home = () => {
                     />
                 </motion.div>
                 <motion.div className='lg:w-1/2 lg:h-screen w-screen h-1/2 flex flex-col bg-[#17153c] text-center justify-center items-center'
+                    whileInView={{
+                        backgroundColor: isSmallViewport ? '#6366f1' : '#17153c'
+                    }}
                     whileHover={{
                         backgroundColor: "#6366f1"
                     }}
